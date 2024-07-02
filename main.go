@@ -196,7 +196,7 @@ func main() {
 					}
 				}
 
-				bot, err := tgbotapi.NewBotAPI("7287859167:AAGIBYegHcXBXmnI01NUFRtrQnegca260W8")
+				bot, err := tgbotapi.NewBotAPI("7287859167:AAElLuN5kRUN3i0txbb59PQN9140lBRlO6o")
 if err != nil {
  logger.Error("Error initializing Telegram Bot API:", err)
 }
