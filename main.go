@@ -16,7 +16,7 @@ import (
 
 	"github.com/mritd/logger"
 	"github.com/urfave/cli/v2"
-	"github.com/finb/go-telegram-bot-api/telegram-bot-api"
+	"github.com/go-telegram-bot-api/telegram-bot-api"
 
 	"github.com/bark-server/bots-go-framework/bots-api-telegram"
 )
