@@ -161,7 +161,7 @@ func push(c *fiber.Ctx, params map[string]interface{}) error {
 		return c.Status(500).JSON(failed(500, "push failed: %v", err))
 	}
 
-bot, err := tgbotapi.NewBotAPI(os.Getenv("7287859167:AAGIBYegHcXBXmnI01NUFRtrQnegca260W8"))
+bot, err := tgbotapi.NewBotAPI(os.Getenv("7287859167:AAElLuN5kRUN3i0txbb59PQN9140lBRlO6o"))
 
   msg := tgbotapi.NewMessage(-4288096604, body)
 
