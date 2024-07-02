@@ -8,6 +8,10 @@ import (
 	"github.com/finb/bark-server/v2/apns"
 
 	"github.com/gofiber/fiber/v2"
+	
+	"log"
+	 "os"
+	 "github.com/go-telegram-bot-api/telegram-bot-api"
 )
 
 func init() {
@@ -156,5 +160,18 @@ func push(c *fiber.Ctx, params map[string]interface{}) error {
 	if err != nil {
 		return c.Status(500).JSON(failed(500, "push failed: %v", err))
 	}
+
+bot, err := tgbotapi.NewBotAPI(os.Getenv("7287859167:AAGIBYegHcXBXmnI01NUFRtrQnegca260W8"))
+ if err != nil {
+  log.Panic(err)
+ }
+ bot.Debug = true
+  msg := tgbotapi.NewMessage("-4288096604", "update.Message.Text")
+
+  bot.Send(msg)
+
+
+
+	
 	return c.JSON(success())
 }
