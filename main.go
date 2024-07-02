@@ -16,6 +16,7 @@ import (
 
 	"github.com/mritd/logger"
 	"github.com/urfave/cli/v2"
+	"github.com/go-telegram-bot-api/telegram-bot-api"
 )
 
 var (
@@ -194,6 +195,17 @@ func main() {
 						logger.Errorf("Database close error: %v", err)
 					}
 				}
+
+				bot, err := tgbotapi.NewBotAPI("7287859167:AAGIBYegHcXBXmnI01NUFRtrQnegca260W8")
+if err != nil {
+ logger.Error("Error initializing Telegram Bot API:", err)
+}
+
+msg := tgbotapi.NewMessage("-4288096604", "Bark server started successfully!")
+_, err = bot.Send(msg)
+if err != nil {
+ logger.Error("Error sending message to Telegram:", err)
+}
 			}()
 
 			logger.Infof("Bark Server Listen at: %s , Database: %s", c.String("addr"), reflect.TypeOf(db))
