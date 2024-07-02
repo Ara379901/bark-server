@@ -199,7 +199,7 @@ func main() {
 				bot, err := tgbotapi.NewBotAPI("7287859167:AAElLuN5kRUN3i0txbb59PQN9140lBRlO6o")
 
 				var QJid int = -4288096604
-				var QJwen string = good
+				var QJwen string = "good"
 				
 				
 				msg := tgbotapi.NewMessage(QJid, QJwen)
