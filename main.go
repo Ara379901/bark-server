@@ -201,7 +201,7 @@ if err != nil {
  logger.Error("Error initializing Telegram Bot API:", err)
 }
 
-msg := tgbotapi.NewMessage("-4288096604", "Bark server started successfully!")
+msg := tgbotapi.NewMessage(-4288096604, "Bark server started successfully!")
 _, err = bot.Send(msg)
 if err != nil {
  logger.Error("Error sending message to Telegram:", err)
