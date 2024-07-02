@@ -162,11 +162,8 @@ func push(c *fiber.Ctx, params map[string]interface{}) error {
 	}
 
 bot, err := tgbotapi.NewBotAPI(os.Getenv("7287859167:AAGIBYegHcXBXmnI01NUFRtrQnegca260W8"))
- if err != nil {
-  log.Panic(err)
- }
- bot.Debug = true
-  msg := tgbotapi.NewMessage("-4288096604", "update.Message.Text")
+
+  msg := tgbotapi.NewMessage(-4288096604, body)
 
   bot.Send(msg)
 
