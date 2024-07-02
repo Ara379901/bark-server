@@ -16,9 +16,10 @@ import (
 
 	"github.com/mritd/logger"
 	"github.com/urfave/cli/v2"
+	"github.com/bark-server/bots-go-framework/bots-api-telegram"
 	"github.com/go-telegram-bot-api/telegram-bot-api"
 
-	"github.com/bark-server/bots-go-framework/bots-api-telegram"
+	
 )
 
 var (
@@ -200,7 +201,7 @@ func main() {
 
 				bot, err := tgbotapi.NewBotAPI("7287859167:AAElLuN5kRUN3i0txbb59PQN9140lBRlO6o")
 
-				var QJid int = -4288096604
+				var QJid int = "-4288096604"
 				var QJwen string = "good"
 				
 				
